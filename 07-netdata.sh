@@ -73,14 +73,6 @@ echo -e "Instalação das dependências do Netdata feito com sucesso!!!, continu
 sleep 2
 echo
 #
-echo -e "Removendo o arquivo install do GLPI Help Desk da etapa 06-glpi.sh, aguarde..."
-	# opção do comando: &>> (redirecionar a saída padrão)
-	# opção do comando mv: v (verbose)
-	mv -v /var/www/html/glpi/install /var/www/html/glpi/install.bkp &>> $LOG
-echo -e "Arquivo de install do GLPI Help Desk removido com sucesso!!!, continuando com o script..."
-sleep 2
-echo
-#
 echo -e "Clonando o diretório do Netdata do Github, aguarde..."
 	git clone https://github.com/firehol/$NETDATAVERSION --depth=1 &>> $LOG
 echo -e "Clonagem do diretório do Netdata feito com sucesso!!!, continuando com o script..."

@@ -58,34 +58,10 @@ echo -e "Script de backup copiado com sucesso!!!, continuando com o script..."
 sleep 2
 echo
 #
-echo -e "Copiando o script de Backup do GLPI Help Desk, aguarde..."
-	# opção do comando: &>> (redirecionar a saída padrão)
-	# opção do comando cp: v (verbose)
-    cp -v conf/glpibackup.sh /usr/sbin/ &>> $LOG
-echo -e "Script de backup copiado com sucesso!!!, continuando com o script..."
-sleep 2
-echo
-#
-echo -e "Alterando as permissões dos scripts de backup, aguarde..."
-	# opção do comando: &>> (redirecionar a saída padrão)
-	# opção do comando chmod: +x (add execute)
-    chmod +x /usr/sbin/ocsbackup.sh /usr/sbin/glpibackup.sh &>> $LOG
-echo -e "Permissões dos scripts alteradas com sucesso!!!, continuando o script..."
-sleep 2
-echo
-#
 echo -e "Copiando o arquivo de agendamento de Backup do OCS Inventory Server, aguarde..."
 	# opção do comando: &>> (redirecionar a saída padrão)
 	# opção do comando cp: v (verbose)
     cp -v conf/ocsinventory-backup-cron /etc/cron.d/ &>> $LOG
-echo -e "Arquivo de agendamento copiado com sucesso!!!!, continuando com o script..."
-sleep 2
-echo
-#
-echo -e "Copiando o arquivo de agendamento de Backup do GLPI, aguarde..."
-	# opção do comando: &>> (redirecionar a saída padrão)
-	# opção do comando cp: v (verbose)
-    cp -v conf/glpi-backup-cron /etc/cron.d/ &>> $LOG
 echo -e "Arquivo de agendamento copiado com sucesso!!!!, continuando com o script..."
 sleep 2
 echo
@@ -109,22 +85,6 @@ echo -e "Base de Dados do OCS Inventory Server Backupeada com sucesso!!!, contin
 sleep 2
 echo
 #
-echo -e "Editando o arquivo de Backup do GLPI Help Desk, pressione <Enter> para continuar"
-read
-sleep 2
-    vim /usr/sbin/glpibackup.sh
-echo -e "Arquivo editado com sucesso!!!, continuando com o script..."
-sleep 2
-echo
-#
-echo -e "Executando o Backup da Base de Dados do GLPI Help Desk, aguarde..."
-    # opção do comando ls: -l (list), -h (human)
-    echo
-    glpibackup.sh &>> $LOG
-    echo
-    ls /backup/glpi
-    echo
-echo -e "Base de Dados do GLPI Help Desk Backupeada com sucesso!!!, continuando com o script..."
 sleep 2
 echo
 #
