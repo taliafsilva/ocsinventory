@@ -46,11 +46,11 @@ export DEBIAN_FRONTEND="noninteractive"
 # opção do comando if: [ ] = teste de expressão, && = operador lógico AND, == comparação de string, exit 1 = 
 # A maioria dos erros comuns na execução
 clear
-if [ "$USUARIO" == "0" ] && [ "$UBUNTU" == "16.04" ] && [ "$KERNEL" == "4.4" ]
+if [ "$USUARIO" == "0" ] && [ "$UBUNTU" == "22.04" ] && [ "$KERNEL" == "5.15" ]
 	then
 		echo -e "O usuário é Root, continuando com o script..."
-		echo -e "Distribuição é >=16.04.x, continuando com o script..."
-		echo -e "Kernel é >= 4.4, continuando com o script..."
+		echo -e "Distribuição é >=22.04.x, continuando com o script..."
+		echo -e "Kernel é >= 5.15, continuando com o script..."
 		sleep 5
 	else
 		echo -e "Usuário não é Root ($USUARIO) ou Distribuição não é >=16.04.x ($UBUNTU) ou Kernel não é >=4.4 ($KERNEL)"
