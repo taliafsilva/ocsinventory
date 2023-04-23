@@ -25,7 +25,7 @@ export DEBIAN_FRONTEND="noninteractive"
 # opção do comando if: [ ] = teste de expressão, && = operador lógico AND, == comparação de string, exit 1 = 
 # A maioria dos erros comuns na execução
 clear
-if [ "$USUARIO" == "0" ] && [ "$UBUNTU" >= "22.04" ] && [ "$KERNEL" == "5.15" ]
+if [ "$USUARIO" == "0" ] && [ "$UBUNTU" == "22.04" ] && [ "$KERNEL" == "5.15" ]
 	then
 		echo -e "O usuário é Root, continuando com o script..."
 		echo -e "Distribuição é >=16.04.x, continuando com o script..."
